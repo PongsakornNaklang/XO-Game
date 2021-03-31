@@ -4,7 +4,7 @@ import { autoPlay } from "./autoPlay"
 const StartGameModal = ({ setState, clearState, boardSize, replays, board }) => {
     const [showReplays, setShowReplays] = useState(false)
 
-    const viewreplays =  (replay) => {
+    const watchReplay =  (replay) => {
         setState(prevState => ({ ...prevState, boardSize: replay.boardSize, start: true }))
 
         autoPlay(replay, 1, setState, () => clearState())
@@ -74,9 +74,9 @@ const StartGameModal = ({ setState, clearState, boardSize, replays, board }) => 
                                             <div className='text-right'>
                                                 <button
                                                     className='focus:outline-none'
-                                                    onClick={() => viewreplays(replay)}
+                                                    onClick={() => watchReplay(replay)}
                                                 >
-                                                    View
+                                                    Watch
                                                 </button>
                                             </div>
                                         </div>
