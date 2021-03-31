@@ -110,7 +110,7 @@ const Index = () => {
             {winner !== null ? <GameOverModal winner={winner} clearState={clearState} /> : null}
             <div className="grid grid-cols-1 gap-2 ">
                 <div className="col-span-1">
-                    <p id='round' className='text-sm text-center text-gray-700 w-40'>Round {round} / size ({boardSize}*{boardSize})</p>
+                    <p id='round' className='text-sm text-center text-gray-700'>Round {round} / size ({boardSize}*{boardSize})</p>
                     <p id='turn' className='text-xs text-center text-gray-700'>Turn : Player {player}</p>
                 </div>
                 <div className="col-span-1">
