@@ -1,14 +1,14 @@
 import firebase from "firebase";
 
 var firebaseConfig = {
-    apiKey: "AIzaSyDM1wZaEJ7zCnKJjCn742NVnuNRtvn97sg",
-    authDomain: "xo-game-1cdbd.firebaseapp.com",
-    databaseURL: "https://xo-game-1cdbd-default-rtdb.firebaseio.com",
-    projectId: "xo-game-1cdbd",
-    storageBucket: "xo-game-1cdbd.appspot.com",
-    messagingSenderId: "315804142218",
-    appId: "1:315804142218:web:ecfebd6e0abd2245fcbb73",
-    measurementId: "G-Z3YN8SVWTZ"
+    apiKey: process.env.API_KEY,
+    authDomain: process.env.AUTH_DOMAIN,
+    databaseURL: 'https://xo-game-1cdbd-default-rtdb.firebaseio.com',
+    projectId: process.env.PROJECT_ID,
+    storageBucket:process.env.STORAGE_BUCKET,
+    messagingSenderId: process.env.MESSAGING_SENDER_ID,
+    appId: process.env.APP_ID,
+    measurementId: process.env.MEASUREMENT_ID
 };
 
 export default !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app();
